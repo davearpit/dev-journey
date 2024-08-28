@@ -58,7 +58,7 @@ This repository is licensed under the [MIT License](LICENSE). See the [LICENSE](
 
 ## Contact
 
-For any questions or inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
+For any questions or inquiries, please contact [arpitdave321@gmail.com](mailto:your-email@example.com).
 
 Happy coding!
 
