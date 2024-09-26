@@ -41,28 +41,10 @@ class LinkedList:
         prev.next = None
         return
 
-    def printList(self):
+    def __repr__(self):
         temp = self.head
         while temp.next != None:
             print(temp.data, end = ' -> ')
             temp = temp.next
         print(temp.data, end = '\n')
         return
-
-if __name__ == "__main__":
-    ll = LinkedList()
-
-    ll.insertAtBeginning('Arpit')
-    ll.insertAtBeginning('Senjuti')
-    ll.insertAtBeginning('Amol')
-
-    ll.insertAtEnd('Archana')
-    ll.insertAtEnd('Rajeev')    
-
-    ll.printList()
-
-    ll.deleteAtBeginning()
-    ll.printList()
-
-    ll.deleteAtEnd()
-    ll.printList()    

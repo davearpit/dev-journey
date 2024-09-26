@@ -3,19 +3,19 @@ class Array:
         self.array = []
         self.size = size
 
-    def insert(self, element, position = -1):
-        if len(self.array) == self.size or (position > -1 and position <= self.size):
+    def insert(self, value, position = -1):
+        if len(self.array) + 1 == self.size or (position > 0 and position <= self.size):
             return 'array is full'
 
         if position == -1:
-            self.array.append(element) 
+            self.array.append(value) 
         else:
-            self.array[position - 1] = element
+            self.array[position - 1] = value
 
-        return self.array
+        return
 
     def delete(self, position = -1):
-        if len(self.array) == 0 or (position > -1 and position <= self.size):
+        if len(self.array) == 0 or (position > 0 and position <= self.size):
             return 'position beyond bounds'
         
         if position == -1:
@@ -23,12 +23,13 @@ class Array:
         else:
             self.array.pop(position - 1)
 
-        return self.array
+        return
     
-    def search(self, element):
-        for pos in range(0, len(self.array)):
-            if self.array[pos] == element:
+    def search(self, value):
+        for pos, el in enumerate(self.array):
+            if el == value:
                 return pos
+            
         return None
     
     def sort(self):
@@ -44,5 +45,6 @@ class Array:
                     self.array[pos_2 + 1] = temp
         
         return self.array
-
     
+    def __repr__(self):
+        return repr(self.array)
